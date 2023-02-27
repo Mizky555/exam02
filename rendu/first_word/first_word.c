@@ -14,7 +14,7 @@ int	 first_word(char *argv)
 {
 	int i = 0;
 
-	while (is_space(argv[i]) == 1)
+	while (is_space(argv[i]))
 		i++;
 	while (is_space(argv[i]) == 0)
 	{
