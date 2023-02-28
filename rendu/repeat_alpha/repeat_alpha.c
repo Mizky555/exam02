@@ -32,6 +32,8 @@ int main(int argc, char **argv)
 				j = argv[1][i] - 'a';
 				repeat_alpha(argv[1][i], j + 1);
 			}
+			else
+				write(1, argv[1][i], 1);
 			i++;
 		}
 	}
