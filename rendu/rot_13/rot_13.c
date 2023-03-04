@@ -31,7 +31,7 @@ int main(int argc, char **argv)
             else if (argv[1][i] >= 'o' && argv[1][i] <= 'z')
             {
                 argv[1][i] = argv[1][i] - 13;
-                write (1, argv[1][i], 1);
+                write (1, &argv[1][i], 1);
             }
             else
                 write (1, &argv[1][i], 1);
