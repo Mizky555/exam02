@@ -28,8 +28,8 @@ int ft_atoi(const char *str)
     return (num * a);
 }
 
-int main()
-{
-    printf("%d\n",ft_atoi("-+123"));
-    printf("%d\n",atoi("-+123"));
-}
+// int main()
+// {
+//     printf("%d\n",ft_atoi("-+123"));
+//     printf("%d\n",atoi("-+123"));
+// }
