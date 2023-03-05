@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 
 int ft_atoi(const char *str)
@@ -12,8 +13,10 @@ int ft_atoi(const char *str)
         i++;
     if (str[i] == '-')
     {
-        a = -1;
         i++;
+        a = -1;
+        if (str[i] == '-' || str[i] == '+')
+            return (0);
     }
     if (str[i] == '+')
         i++;
@@ -25,7 +28,8 @@ int ft_atoi(const char *str)
     return (num * a);
 }
 
-// int main()
-// {
-//     printf("%d\n",ft_atoi("-+123"));
-// }
+int main()
+{
+    printf("%d\n",ft_atoi("-+123"));
+    printf("%d\n",atoi("-+123"));
+}
