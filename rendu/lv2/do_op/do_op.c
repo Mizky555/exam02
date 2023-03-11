@@ -4,19 +4,25 @@
 
 int main(int argc, char **argv)
 {
+    int num = atoi(argv[1]);
+    int numnum = atoi(argv[3]);
+    int nuum;
+
+    printf("%d,%s,%d\n",num,argv[3],numnum);
     if (argc == 4)
     {
         if (argv[2][0] == '+')
-            printf("%d\n",atoi(argv[1]) + atoi(argv[3]));
+            nuum = num + numnum;
         else if (argv[2][0] == '-')
-            printf("%d\n",atoi(argv[1]) - atoi(argv[3]));
+            nuum = num - numnum;
         else if (argv[2][0] == '*')
-            printf("%d\n",atoi(argv[1]) * atoi(argv[3]));
+            nuum = num * numnum;
         else if (argv[2][0] == '/')
-            printf("%d\n",atoi(argv[1]) / atoi(argv[3]));
+            nuum = num / numnum;
         else if (argv[2][0] == '%')
-            printf("%d\n",atoi(argv[1]) % atoi(argv[3]));
-        printf("test = %d", 3 * 9);
+            nuum = num % numnum;
+        printf("%d",nuum);
     }
+    printf("\n");
     return (0);
 }
