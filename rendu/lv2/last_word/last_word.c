@@ -24,7 +24,7 @@ int	main(int	argc, char **argv)
 	{
 		while (len >= 0 && ft_isspace(argv[1][len - 1] == 0))
 			len--;
-			printf("isspace = %d\n",);
+			printf("isspace = %d\n",ft_isspace(argv[1][len - 1] == 0));
 		while (len >= 0 && ft_isspace(argv[1][len - 1]) != 0)
 		{
 	printf("len = %d\n", len);
