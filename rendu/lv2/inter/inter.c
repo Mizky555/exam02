@@ -1,27 +1,18 @@
 #include <stdio.h>
 #include <unistd.h>
 
-void	print_union(char *str)
+void	print_union(char *str, int index)
 {
-	int	index = 0;
-	int	i;
+	int	i = 0;
 
-	while (str[index])
+	while (index > i)
 	{
-		i = 0;
-		while (i < index)
-		{
-			if (str[index] == str[i])
-				break;
-			i++;
-		}
-		if (index == i)
-		{
-			write (1, &str[index], 1);
+		if (str[i] == str[index])
 			break;
-		}
-		index++;
+		i++;
 	}
+	if (i == index)
+		write (1, &str[index], 1);
 }
 
 int	main(int argc, char **argv)
@@ -35,11 +26,11 @@ int	main(int argc, char **argv)
 		while (argv[1][i])
 		{
 			j = 0;
-			while (argv[2][j])
+			while (argv[2][j] != '\0')
 			{
-				if (argv[2][i] == argv[1][j])
+				if (argv[2][j] == argv[1][i])
 				{
-					print_union(argv[1]);
+					print_union(argv[1], i);
 					break;
 				}
 				j++;
