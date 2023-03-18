@@ -29,7 +29,6 @@ unsigned char	reverse_bits(unsigned char octet)
 }
 
 
-
 int	main()
 {
 	print_bits('M');

@@ -18,20 +18,27 @@ int	ft_isspace(char	cha)
 
 int	main(int	argc, char **argv)
 {
-	int	i;
-	int	len = ft_strlen(argv[1]);
+	int	i = 0;
+
 	if (argc == 2)
 	{
-		while (len >= 0 && ft_isspace(argv[1][len - 1] == 0))
-			len--;
-			printf("isspace = %d\n",ft_isspace(argv[1][len - 1] == 0));
-		while (len >= 0 && ft_isspace(argv[1][len - 1]) != 0)
+		i = ft_strlen(argv[1]);
+		if (i <= 0)
+		return (0);
+		while (ft_isspace(argv[1][i - 1]) == 0)
 		{
-	printf("len = %d\n", len);
-			write(1, &argv[1][len - 1], 1);
-			len--;
+			i--;
 		}
+		while (ft_isspace(argv[1][i - 1]) == 1)
+		{
+			i--;
+		}
+		i++;
+		while (ft_isspace(argv[1][i - 1]) == 1 && argv[1][i - 1])
+		{
+			write (1, &argv[1][i-1], 1);
+			i++;
+		}
+		return (0);
 	}
-	write(1, "\n", 1);
-	return (0);
 }
