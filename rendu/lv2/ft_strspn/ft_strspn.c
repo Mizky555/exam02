@@ -28,7 +28,7 @@ size_t	ft_strspn(const char *s, const char *accept)
 
 int	main()
 {
-	printf("strspn = %lu\n",ft_strspn("Hello","Ho" ));
+	printf("strspn = %lu\n",ft_strspn("ee","oHHHe" ));
 }
 
 
