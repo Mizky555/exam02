@@ -10,7 +10,7 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	while (s[i])
 	{
 		j = 0;
-		while (reject(j))
+		while (reject[j])
 		{
 			if (s[i] == reject[j])
 				return (i);
@@ -23,5 +23,7 @@ size_t	ft_strcspn(const char *s, const char *reject)
 
 int	main ()
 {
-	printf("strcspn%lu\n",strcspn("Helloa","abced"));
+	printf("ft_strcspn %lu\n",ft_strcspn("Hllo44444","abced"));
+	printf("strcspn %lu\n",strcspn("Hllo","abced"));
 }
+	
