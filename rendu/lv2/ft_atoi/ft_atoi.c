@@ -2,34 +2,62 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int ft_atoi(const char *str)
+int ft_atoi(char *s)
 {
     int i = 0;
-    int num = 0;
     int a = 1;
+    int num = 0;
 
-    while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+    while (s[i] == '\f' || s[i] == '\n' || s[i] == '\r' || s[i] == '\t' ||s[i] == '\v')
         i++;
-    if (str[i] == '-')
+    if (s[i] == '-')
     {
-        i++;
         a = -1;
-        if (str[i] == '-' || str[i] == '+')
+        i++;
+        if (s[i] == '-' || s[i] == '+')
             return (0);
     }
-    if (str[i] == '+')
-        i++;
-    while (str[i] >= '0' && str[i] <= '9')
+    else if (s[i] == '+')
     {
-        num = num * 10 + (str[i] - '0');
         i++;
+        if (s[i] == '+' || s[i] == '-')
+            return (0);
     }
-    return (num * a);
+    while (s[i])
+    {
+        num = num * 10 + (s[i++] - '0');
+    }
+    return (num);
+    
 }
 
-// int main()
+// int ft_atoi(const char *str)
 // {
-//     printf("%d\n",ft_atoi("-+123"));
-//     printf("%d\n",atoi("-+123"));
+//     int i = 0;
+//     int num = 0;
+//     int a = 1;
+
+//     while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)//ไม่เอาspace tab
+//         i++;
+//     if (str[i] == '-')// - ได้แค่ตัวเดียว
+//     {
+//         i++;
+//         a = -1;
+//         if (str[i] == '-' || str[i] == '+')
+//             return (0);
+//     }
+//     if (str[i] == '+')// + ให้ขยับ
+//         i++;
+//     while (str[i] >= '0' && str[i] <= '9')
+//     {
+//         num = num * 10 + (str[i] - '0');
+//         i++;
+//     }
+//     return (num * a);
 // }
+
+int main()
+{
+    printf("%d\n",ft_atoi("--123"));
+    printf("%d\n",atoi("--123"));
+}
