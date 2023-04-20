@@ -31,6 +31,10 @@ in ascending order:
 
 int ascending(int a, int b)
 {
-	return (a <= b);
+	return (a <= b); ถ้า a <= b return 1 ไม่ใช่จะ return 0
 }
 ```
+321
+231
+213
+123

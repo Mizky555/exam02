@@ -13,3 +13,7 @@ members, in ascending order.
 Doubles must be preserved.
 
 Input is always coherent.
+
+
+สร้างฟังก์ชั่นที่ชื่อ void sort_int_tab(int *tab, unsigned int size);
+มาเรียงอาเรย์
